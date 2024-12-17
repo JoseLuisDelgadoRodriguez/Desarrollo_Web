@@ -1,0 +1,71 @@
+:root{
+    --principal: #000000;
+    --secundario: #b4b4e8;
+    --blanco: #ffffff;
+    --secundario-oscuro: #0A3981;
+    --seleccionado: #cb5b00;
+
+    /* fuentes */
+    --fuente-principal:"kanit", Arial;
+    --forma-principal: 400; /*normal*/
+    --forma-negrita: 700; /*negrita*/
+    --estilo-principal: normal;
+    --estilo-cursiva: italic;
+}
+@media (min-width:768px) {
+    .nuestras-instalaciones{
+        display:flex;
+        align-items:center;
+        align-content:center;
+        justify-content:center;
+        gap:40px;
+        margin-top:auto;
+    }
+    
+}
+
+
+.nuestras-instalaciones img{
+    width: 100%;
+    height: auto;
+}
+
+.nav-cabecera .instalaciones{
+    color: var(--seleccionado);
+}
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 30px;
+}
+
+img{
+    border-radius: 2%;
+}
+svg{
+    width: 30px;
+}
+
+.contacto a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--principal);
+    text-decoration: none;
+}
+    
+.contacto a:hover{
+    color: var(--seleccionado);
+    font-size: 20px;
+}
+
+
+h3{
+    color: var(--secundario-oscuro);
+}
+
+
+
+

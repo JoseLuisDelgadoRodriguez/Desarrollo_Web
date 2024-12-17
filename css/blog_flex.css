@@ -1,0 +1,151 @@
+:root{
+    --principal: #000000;
+    --secundario: #b4b4e8;
+    --blanco: #ffffff;
+    --secundario-oscuro: #0A3981;
+    --seleccionado: #cb5b00;
+
+    /* fuentes */
+    --fuente-principal:"kanit", Arial;
+    --forma-principal: 400; /*normal*/
+    --forma-negrita: 700; /*negrita*/
+    --estilo-principal: normal;
+    --estilo-cursiva: italic;
+}
+
+
+
+.nav-cabecera .blog{
+    color: var(--seleccionado);
+}
+
+/* Ajustes para las imágenes */
+.miblog img {
+    width: 100%;
+    height: auto;
+}
+
+/* Ajustes para el logo específico */
+img[alt="logo academia épsilon"] {
+    max-width: 13rem; /* Tamaño máximo relativo (ajústalo según sea necesario) */
+    height: auto; /* Mantiene la proporción sin distorsión */
+    display: block; /* Elimina espacio extra alrededor de la imagen */
+    margin: 0 auto; /* Centra la imagen dentro de su contenedor */
+}
+
+/* Contenedor principal */
+.miblog {
+    display: flex; /* Disposición en fila */
+    justify-content: space-between; /* Espaciado uniforme entre columnas */
+    align-items: flex-start; /* Alineación superior */
+    gap: 1rem; /* Espaciado entre las secciones */
+    padding: 2rem; /* Espaciado interno */
+    height: 120rem; /* Altura ajustada en rem */
+}
+
+/* Cursos Comenzados (contenedor central) */
+.cursos-comenzados {
+    flex: 3; /* Más ancho que las columnas laterales */
+    margin: auto; /* Margen horizontal para separación */
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    text-align: center; /* Centrar títulos y contenido */
+}
+
+/* Objetivo (contenedor lateral izquierdo) */
+.objetivo {
+    flex: 1;
+    margin: 0;
+    height: 100rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; /* Centrar contenido horizontalmente */
+    margin-top: 6rem;
+    text-align: center; /* Centrar texto dentro de la sección */
+}
+
+/* Experiencias (contenedor lateral derecho) */
+.experiencias {
+    flex: 1;
+    margin: 0;
+    height: 100rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; /* Centrar contenido horizontalmente */
+    margin-top: 6rem;
+    text-align: center; /* Centrar texto dentro de la sección */
+}
+
+/* Títulos y separación */
+.objetivo h2,
+.experiencias h2,
+.cursos-comenzados h2 {
+    margin-bottom: 1.5rem; /* Separación entre el título y el contenido */
+    text-align: center; /* Asegurar que siempre estén centrados */
+}
+
+/* Responsividad para pantallas grandes (ordenador) */
+@media (min-width: 769px) {
+    .miblog {
+        flex-direction: row; /* Disposición horizontal */
+    }
+
+    .objetivo {
+        order: -1; /* Coloca la columna objetivo a la izquierda */
+    }
+
+    .cursos-comenzados {
+        order: 0; /* Deja los cursos comenzados en el centro */
+    }
+
+    .experiencias {
+        order: 1; /* Coloca la columna experiencias a la derecha */
+    }
+}
+
+/* Responsividad para tablet y móvil */
+@media (max-width: 768px) {
+    .miblog {
+        flex-direction: column; /* Cambia a disposición vertical */
+        height: auto;
+    }
+
+    .cursos-comenzados {
+        order: 1;
+        margin: 0;
+        width: 100%;
+    }
+
+    .objetivo {
+        order: 2;
+        margin: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .experiencias {
+        order: 3;
+        margin: 0;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .miblog {
+        flex-direction: column;
+        gap: 1rem;
+        height: auto;
+    }
+
+    .cursos-comenzados,
+    .objetivo,
+    .experiencias {
+        width: 100%;
+        margin: 0;
+        height: auto;
+    }
+}
